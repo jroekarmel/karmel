@@ -139,6 +139,7 @@
 // Event-Rendering
 document.addEventListener("DOMContentLoaded", async () => {
   const container = document.getElementById("event-list");
+  if (!container) return;
 
   try {
     const response = await fetch("events.json");
@@ -221,3 +222,52 @@ setupToggle('beschreibung-toggle', 'beschreibung-wrap', 'Beschreibung schließen
 setupToggle('datenschutz-toggle', 'datenschutz-wrap', 'Datenschutz schließen', 'Datenschutz');
 setupToggle('impressum-toggle', 'impressum-wrap', 'Impressum schließen', 'Impressum');
 
+// syncing Rundbriefe boxes
+document.addEventListener("DOMContentLoaded", () => {
+  const pairs = [
+    { card: "#oesterreich .card-option-input", formId: "mce-group[16777]-16777-0" },
+    { card: "#wien .card-option-input", formId: "mce-group[16777]-16777-1" },
+    { card: "#linz .card-option-input", formId: "mce-group[16777]-16777-2" },
+    { card: "#graz .card-option-input", formId: "mce-group[16777]-16777-3" },
+    { card: "#online .card-option-input", formId: "mce-group[16777]-16777-4" },
+    { card: "#edith-stein .card-option-input", formId: "mce-group[16777]-16777-5" },
+    { card: "#friedensgebet .card-option-input", formId: "mce-group[16777]-16777-6" },
+    { card: "#exerzitien .card-option-input", formId: "mce-group[16777]-16777-7" },
+    { card: "#skapuliernovene .card-option-input", formId: "mce-group[16777]-16777-8" },
+    { card: "#schritte33 .card-option-input", formId: "mce-group[16777]-16777-9" },
+    { card: "#jesusgebet .card-option-input", formId: "mce-group[16777]-16777-10" }
+  ];
+
+  pairs.forEach(({ card, formId }) => {
+    const cardCheckbox = document.querySelector(card);
+    const formCheckbox = document.getElementById(formId);
+
+    if (!cardCheckbox || !formCheckbox) return;
+
+    const featureCard = cardCheckbox.closest(".feature-card");
+
+    const updateCardState = (checked) => {
+      cardCheckbox.checked = checked;
+      if (featureCard) {
+        featureCard.classList.toggle("is-selected", checked);
+      }
+    };
+
+    const updateFormState = (checked) => {
+      formCheckbox.checked = checked;
+    };
+
+    updateCardState(formCheckbox.checked);
+
+    cardCheckbox.addEventListener("change", () => {
+      updateFormState(cardCheckbox.checked);
+      if (featureCard) {
+        featureCard.classList.toggle("is-selected", cardCheckbox.checked);
+      }
+    });
+
+    formCheckbox.addEventListener("change", () => {
+      updateCardState(formCheckbox.checked);
+    });
+  });
+});

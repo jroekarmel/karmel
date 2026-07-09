@@ -78,11 +78,11 @@
                         <li><input type="checkbox" name="group[16777][64]" id="mce-group[16777]-16777-0" value="" checked><label for="mce-group[16777]-16777-0">alle Veranstaltungen des Karmel in Österreich</label></li>
                           <details><summary>oder nur Veranstaltungen (ausklappen)</summary>
                             <ul>
-                        <li><input type="checkbox" name="group[16777][524288]" id="mce-group[16777]-16777-10" value=""><label for="mce-group[16777]-16777-10">online</label></li>
-                        <li><input type="checkbox" name="group[16777][512]" id="mce-group[16777]-16777-5" value=""><label for="mce-group[16777]-16777-5">in Wien</label></li>
-                        <li><input type="checkbox" name="group[16777][1024]" id="mce-group[16777]-16777-6" value=""><label for="mce-group[16777]-16777-6">in Linz</label></li>
-                        <li><input type="checkbox" name="group[16777][2048]" id="mce-group[16777]-16777-8" value=""><label for="mce-group[16777]-16777-8">in Graz</label></li>
-                              </ul>
+                        <li><input type="checkbox" name="group[16777][512]" id="mce-group[16777]-16777-1" value=""><label for="mce-group[16777]-16777-1">in Wien</label></li>
+                        <li><input type="checkbox" name="group[16777][1024]" id="mce-group[16777]-16777-2" value=""><label for="mce-group[16777]-16777-2">in Linz</label></li>
+                        <li><input type="checkbox" name="group[16777][2048]" id="mce-group[16777]-16777-3" value=""><label for="mce-group[16777]-16777-3">in Graz</label></li>
+                        <li><input type="checkbox" name="group[16777][524288]" id="mce-group[16777]-16777-4" value=""><label for="mce-group[16777]-16777-4">online</label></li>
+                      </ul>
                       </details>
                         <li><input type="checkbox" name="group[16777][256]" id="mce-group[16777]-16777-5" value=""><label for="mce-group[16777]-16777-5">Infos/Veranstaltungen der Edith Stein Gesellschaft</label></li>
                         <details><summary>Online Novenen und Exerzitien (ausklappen)</summary>
@@ -123,9 +123,7 @@
         </div><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7c9d2aa0ecc1fde64fd44bc67_10430a5833" tabindex="-1" value=""></div>
         <div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Anmleden"></div>
         
-    
-
-</p>
+  
     <div class="card-links">
           <a href="#datenschutz-wrap" id="datenschutz-toggle" aria-expanded="false" aria-controls="datenschutz-wrap">Datenschutz</a>
                       <div id="datenschutz-wrap" hidden>
@@ -159,17 +157,22 @@
         </div>
 
         <div class="feature-grid">
-          <article class="feature-card" id="oesterreich">
+          <article class="feature-card" id="oesterreich" data-sync-target="mce-group[16777]-16777-0">
               <div class="image-zoom">
                   <img src="img/header_at.jpg" alt="">
               </div>
             <p class="card-kicker">Österreich</p>
             <h3>Infos zu Karmelveranstaltungen in Österreich</h3>
             <p>Aktuelle Hinweise zu Veranstaltungen des Karmel in ganz Österreich, wie Vorträge, Einkehrtage, Gottesdienste und besondere Feiern.</p>
+            <label class="card-option">
+              <input type="checkbox" class="card-option-input" data-sync-target="mce-group[16777]-16777-0">
+              <span>Diesen Rundbrief auswählen</span>
+            </label>
             <div class="card-links">
               <a href="https://us6.campaign-archive.com/home/?u=7c9d2aa0ecc1fde64fd44bc67&id=10430a5833" target="_blank">Archiv mit Beispiel-E-Mails</a>
-              </a>
             </div>
+
+            
           </article>
 
           <article class="feature-card feature-card--accent" id="wien">
@@ -179,39 +182,55 @@
             <p class="card-kicker">Wien</p>
             <h3>Infos zum Karmelitenkonvent in Wien</h3>
             <p>Neuigkeiten, Termine und Einblicke aus dem Wiener Karmelitenkonvent, inklusive liturgischer Angebote und Gemeinschaftsleben.</p>
+            <label class="card-option">
+    <input type="checkbox" class="card-option-input" data-sync-target="mce-group[16777]-16777-1">
+    <span>Diesen Rundbrief auswählen</span>
+  </label>
             <div class="card-links">
               <a href="https://mailchi.mp/karmel/programm-mrz-2021-karmelitenkirche-dbling-7363696" target="_blank">Beispiel-E-Mail</a>
             </div>
           </article>
-                    <article class="feature-card" id="fest">
+                    <article class="feature-card" id="linz">
                             <div class="image-zoom">
                   <img src="img/header_linz.jpg" alt="Karmelitenkirche Linz">
               </div>
             <p class="card-kicker">Linz</p>
             <h3>Infos zum Karmelitenkonvent in Linz</h3>
             <p>Informationen zu Veranstaltungen, geistlichen Angeboten und Aktivitäten des Karmelitenkonvents in Linz.</p>
+            <label class="card-option">
+    <input type="checkbox" class="card-option-input" data-sync-target="mce-group[16777]-16777-2">
+    <span>Diesen Rundbrief auswählen</span>
+  </label>
             <div class="card-links">
               <a href="">Beispiel-E-Mail</a>
             </div>
           </article>
-                    <article class="feature-card feature-card--accent" id="fest">
+                    <article class="feature-card feature-card--accent" id="graz">
                             <div class="image-zoom">
                   <img src="img/header_graz.jpg" alt="Skapulierfest Cover">
               </div>
             <p class="card-kicker">Graz</p>
             <h3>Infos zum Karmelitenkonvent in Graz</h3>
             <p>Aktuelle Termine, Gottesdienste und besondere Initiativen des Karmelitenkonvents in Graz</p>
+            <label class="card-option">
+    <input type="checkbox" class="card-option-input" data-sync-target="mce-group[16777]-16777-3">
+    <span>Diesen Rundbrief auswählen</span>
+  </label>
             <div class="card-links">
               <a href="">Beispiel-E-Mail</a>
             </div>
           </article>
-                             <article class="feature-card" id="fest">
+                             <article class="feature-card" id="online">
                             <div class="image-zoom">
                   <img src="img/header_online.jpg" alt="Handy mit Bibel">
               </div>
             <p class="card-kicker">Online</p>
             <h3>Veranstaltungen und Angebote Online</h3>
             <p>Nachrichten über digitale Angebote wie Vorträge, Gebetszeiten und Exerzitien, die ortsunabhängig online mitverfolgt werden können.</p>
+                        <label class="card-option">
+    <input type="checkbox" class="card-option-input" data-sync-target="mce-group[16777]-16777-4">
+    <span>Diesen Rundbrief auswählen</span>
+  </label>
             <div class="card-links">
               <a href="https://mailchi.mp/karmel/einladung-zur-edith-stein-tagung-29-u-30-oktober-7363232" target="_blank">Beispiel-E-Mail</a>
             </div>
@@ -226,24 +245,32 @@
           <h2 id="angebote-titel">Angebote zur Edith Stein</h2>
         </div>
         <div class="feature-grid">
-                    <article class="feature-card" id="fest">
+                    <article class="feature-card" id="edith-stein">
                             <div class="image-zoom">
                   <img src="img/edithstein.jpg" alt="Skapulierfest Cover">
               </div>
             <p class="card-kicker">Edith Stein</p>
             <h3>Infos/Veranstaltungen der Edith Stein Gesellschaft Österreich</h3>
             <p>Hinweise auf Veranstaltungen und Informationen der Edith Stein Gesellschaft</p>
+                        <label class="card-option">
+    <input type="checkbox" class="card-option-input" data-sync-target="mce-group[16777]-16777-5">
+    <span>Diesen Rundbrief auswählen</span>
+  </label>
             <div class="card-links">
               <a href="https://mailchi.mp/karmel/braucht-glaube-mut-16-04-7363674" target="_blank">Beispiel-E-Mail</a>
             </div>
           </article>
-                             <article class="feature-card feature-card--accent" id="fest">
+                             <article class="feature-card feature-card--accent" id="friedensgebet">
                             <div class="image-zoom">
-                  <img src="img/header_friedensgebet.png" alt="Skapulierfest Cover">
+                  <img src="img/header_friedensgebet.png" alt="Friedensgebet Cover">
               </div>
             <p class="card-kicker">Friedensgebet</p>
             <h3>Friedensgebet / Novene Hl. Edith Stein</h3>
             <p>Einladungen zu gemeinsamen Gebetszeiten und Novenen im Anliegen des Friedens, inspiriert von der Spiritualität der heiligen Edith Stein.</p>
+                        <label class="card-option">
+    <input type="checkbox" class="card-option-input" data-sync-target="mce-group[16777]-16777-6">
+    <span>Diesen Rundbrief auswählen</span>
+  </label>
             <div class="card-links">
               <a href="https://mailchi.mp/karmel/einladung-edith-stein-novene-fr-europa-7362695" target="_blank">Beispiel-E-Mail</a>
             </div>
@@ -258,46 +285,62 @@
           <h2 id="angebote-titel">Novene und Exerzitien</h2>
         </div>
         <div class="feature-grid">
-                    <article class="feature-card" id="fest">
+                    <article class="feature-card" id="exerzitien">
                             <div class="image-zoom">
                   <img src="img/header_online-exerzitien_DE.png" alt="Skapulierfest Cover">
               </div>
             <p class="card-kicker">Exerzitien Online</p>
             <h3>Exerzitien Online in Advent / Fastenzeit</h3>
             <p>Begleitete Online-Exerzitien zur geistlichen Vertiefung in den liturgischen Zeiten des Advents und der Fastenzeit.</p>
+                        <label class="card-option">
+    <input type="checkbox" class="card-option-input" data-sync-target="mce-group[16777]-16777-7">
+    <span>Diesen Rundbrief auswählen</span>
+  </label>
             <div class="card-links">
               <a href="https://mailchi.mp/karmel/einladung-zu-adventexerzitien-2018-7363255" target="_blank">Beispiel-E-Mail</a>
             </div>
           </article>
-          <article class="feature-card feature-card--accent" id="fest">
+          <article class="feature-card feature-card--accent" id="skapuliernovene">
                             <div class="image-zoom">
                   <img src="img/novene-cover-2.jpg" alt="Novene zu Maria vom Berge Karmel Cover">
               </div>
             <p class="card-kicker">Skapuliernovene</p>
             <h3>Novene Online zum Skapulierfest</h3>
             <p>Gebetsreihe zur Vorbereitung auf das Skapulierfest, mit täglichen Impulsen und gemeinschaftlichem Gebet online.</p>
+                        <label class="card-option">
+    <input type="checkbox" class="card-option-input" data-sync-target="mce-group[16777]-16777-8">
+    <span>Diesen Rundbrief auswählen</span>
+  </label>
             <div class="card-links">
               <a href="https://mailchi.mp/karmel/online-exerzitien-7363651" target="_blank">Beispiel-E-Mail</a>
             </div>
           </article>
-                    <article class="feature-card" id="fest">
+                    <article class="feature-card" id="schritte33">
                             <div class="image-zoom">
                   <img src="img/header_33schritte.jpg" alt="Skapulierfest Cover">
               </div>
             <p class="card-kicker">33 Schritte</p>
             <h3>33 Schritte mit Maria zu Jesus</h3>
             <p>Geistlicher Weg der Marienweihe in 33 Tagen, mit täglichen Betrachtungen und Anleitungen zur Vertiefung der Christusbeziehung.</p>
+                        <label class="card-option">
+    <input type="checkbox" class="card-option-input" data-sync-target="mce-group[16777]-16777-9">
+    <span>Diesen Rundbrief auswählen</span>
+  </label>
             <div class="card-links">
-              <a href="https://mailchi.mp/karmel/33-schritte-2-tag-7362852" target="_blank">Archiv mit Beispiel-E-Mails</a>
+              <a href="https://mailchi.mp/karmel/33-schritte-2-tag-7362852" target="_blank">Beispiel-E-Mail</a>
             </div>
           </article>
-                              <article class="feature-card feature-card--accent" id="fest">
+                              <article class="feature-card feature-card--accent" id="jesusgebet">
                             <div class="image-zoom">
                   <img src="img/header_jesusgebet.jpg" alt="Bibel mit Rosenkranz">
               </div>
             <p class="card-kicker">Jesus-Gebet</p>
             <h3>Jesus-Gebet</h3>
             <p>Informationen und Einladungen zu kontemplativen Gebetstreffen und zum Jesusgebet.</p>
+                        <label class="card-option">
+    <input type="checkbox" class="card-option-input" data-sync-target="mce-group[16777]-16777-10">
+    <span>Diesen Rundbrief auswählen</span>
+  </label>
             <div class="card-links">
               <a href="https://mailchi.mp/karmel/jesus-gebet-in-linz" target="_blank">Beispiel-E-Mail</a>
             </div>
