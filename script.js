@@ -279,17 +279,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const regionalKeys = ["wien", "linz", "graz", "online"];
 
-  const applyExclusiveRules = (changedKey, checked) => {
-    if (!checked) return;
+const applyExclusiveRules = (changedKey, checked) => {
+  if (changedKey === "oesterreich") {
+    regionalKeys.forEach((key) => setChecked(key, checked));
+    return;
+  }
 
-    if (changedKey === "oesterreich") {
-      regionalKeys.forEach((key) => setChecked(key, false));
-    }
-
-    if (regionalKeys.includes(changedKey)) {
-      setChecked("oesterreich", false);
-    }
-  };
+  if (regionalKeys.includes(changedKey)) {
+    setChecked("oesterreich", false);
+  }
+};
 
   Object.keys(items).forEach((key) => {
     syncVisualState(key);
