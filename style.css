@@ -683,6 +683,7 @@ ul {
   color: var(--brown);
   font-size: var(--text-sm);
   font-weight: 600;
+  text-decoration: none;
 }
 .card-links a.plain-link {
   display: inline;
@@ -1007,4 +1008,109 @@ ul {
   justify-content: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+#mc_embed_signup input[type="checkbox"],
+.card-option-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin: 0.5rem;
+  flex: 0 0 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  background: var(--bg);
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+#mc_embed_signup input[type="checkbox"]::before,
+.card-option-input::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  transform: scale(0);
+  transition: transform 160ms ease-in-out;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0, 43% 62%);
+  background: white;
+}
+
+#mc_embed_signup input[type="checkbox"]:checked,
+.card-option-input:checked {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+#mc_embed_signup input[type="checkbox"]:checked::before,
+.card-option-input:checked::before {
+  transform: scale(1);
+}
+
+#mc_embed_signup input[type="checkbox"]:focus-visible,
+.card-option-input:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+details.option-group {
+  margin: 0.75rem 0;
+}
+
+details.option-group summary {
+  display: flex;
+  align-items: left;
+  justify-content: none;
+  max-width: 420px;
+  gap: 1rem;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  font-weight: 400;
+  font-style: italic;
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+details.option-group summary:hover,
+details.option-group summary:focus-visible {
+  border-color: var(--gold);
+  background: color-mix(in srgb, var(--surface) 88%, var(--gold) 12%);
+}
+
+details.option-group summary::-webkit-details-marker {
+  display: none;
+}
+
+details.option-group summary::marker {
+  content: "";
+}
+
+details.option-group summary::after {
+  content: "+";
+  display: inline-grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  background: rgba(209, 193, 173, 0.24);
+  color: var(--brown);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+details.option-group[open] summary::after {
+  content: "−";
+}
+
+details.option-group > div,
+details.option-group > ul {
+  margin-top: 0.6rem;
+  padding: 0.5rem 0 0.25rem 0;
 }
